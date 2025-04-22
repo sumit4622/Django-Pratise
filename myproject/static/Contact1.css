@@ -1,0 +1,21 @@
+.contact{
+    padding : 0rem 2.5rem;
+    color: white;
+    background-color: #0b0b0b;
+}
+
+.cont-Feild .icone{
+    padding: 1rem 0rem;
+    font-size: 1.3rem;
+}
+
+.cont-Feild > p {
+    padding-bottom: 1.2rem;
+}
+
+.contact .input {
+    display: grid;
+    padding: 0rem 4rem;
+    grid-template-rows: repeat(4 ,3vw);
+    gap: 1rem;
+}

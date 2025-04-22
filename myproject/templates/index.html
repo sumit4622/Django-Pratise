@@ -1,0 +1,159 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'Project.css'%}">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="{% static 'Contct1.css'%}">
+    <link rel="stylesheet" href="{% static 'Home.css'%}">
+    <link rel="stylesheet" href="{% static 'Contact.css'%}">
+    <link rel="stylesheet" href="{% static 'Responsive.css'%}">
+    {% tailwind_css %}
+</head>
+
+<body>
+    <div class="div"><p class="bg-green-5000">hehehehe</p></div>
+    <div class="hamburg">
+        <img src="./assets/Icon/more.png" alt="more" style="width: 23px;">
+        <img src="./assets/Icon/close.png" alt="close" style="width: 23px;">
+    </div>
+    <div class="conitener">
+        <div class="navbar">
+            <ul>
+                <li class="link"><a href="#Home"><i class="fa fa-home w3-xxlarge"></i> <br> <span>Home</span></a>
+                </li>
+                <li class="link"><a href="#About"><i class="fa fa-user w3-xxlarge"></i> <br> <span>About</span></a>
+                </li>
+                <li class="link"><a href="#Project"><i class="fa fa-eye w3-xxlarge"></i> <br>
+                        <span>Project</span></a></li>
+                <li class="link"><a href="#Contact"> <i class="fa fa-envelope w3-xxlarge"></i><br><span>
+                            Contact</span></a></li>
+            </ul>
+        </div>
+        <div class="container" id="Home">
+            <div class="Hero-container">
+                <h1>I'm Sumit Ray</h1>
+                <p>Full-Stack developer and System Administrator</p>
+                <div class="image">
+                    <img id="sumit" src="../assets/images/sumit.jpg" alt="sumitImage">
+                </div>
+            </div>
+
+            <div class="Contact" id="About">
+                <div class="name">
+                    <h1><b><u>Sumit Ray</u></b></h1>
+                    <p>I’m a experienced IT Professional with a of cybersecurity and networking and computer. I can
+                        maintain order, implement strong security measures, and ensure that the business complies with
+                        security regulations. I can identify and address issues, monitor systems for issues, and provide
+                        safe IT solutions. I'm eager to put my abilities to and improving the security of the company's
+                        critical data</p>
+                </div>
+                <div class="poll">
+                    <div class="class">
+                        <p>Full-Stack developer</p>
+                        <div class="white" style="height: 28px; background-color: white;">
+                            <div class="dark" style="height:28px;width:60%; background-color: grey;"></div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <p>System Administrator</p>
+                        <div class="white" style="height: 28px; background-color: white;">
+                            <div class="dark" style="height:28px;width:70%; background-color: grey;"></div>
+                        </div>
+                    </div>
+                    <div class="class">
+                        <p>Networking</p>
+                        <div class="white" style="height: 28px; background-color: white; ">
+                            <div class="dark" style="height:28px;width:85%; background-color: grey;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project" id="Project" style="margin-left: 2vh;">
+                <h1 style="padding-bottom: 18px;"><b><u>Project</u></b></h1>
+                <div class="card-coni">
+                    <div class="card">
+                        <div class="image">
+                            <img src="../assets/images/smartAir.png" alt="Air monitroing System">
+                        </div>
+                        <div class="content">
+                            <a href="#">
+                                <span class="title">
+                                    Air monitroing system.
+                                </span>
+                            </a>
+
+                            <p class="desc" style=" text-align: justify;">
+                                Air monitroing system help to find out the harmful gases from the air and then alert to
+                                the user accroding to it.
+                            </p>
+
+                            <a class="action" href="#">
+                                Find out more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="../assets/images/Hosptal.png" alt="Hosptial managment system">
+                        </div>
+                        <div class="content">
+                            <a href="#">
+                                <span class="title">
+                                    Hosptial management system.
+                                </span>
+                            </a>
+
+                            <p class="desc" style="text-align: justify;">
+                                Develope the CLI based Hosptal managmend system which help staff to find out the patient
+                                and search aout the doctor easy way.
+                            </p>
+
+                            <a class="action" href="#">
+                                Find out more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact" id="Contact" style=" margin-left: 2vh;">
+                <div class="contact">
+                    <h1><b><u>Contact</u></b></h1>
+                    <div class="cont-Feild">
+                        <div class="icone">
+                            <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+                                Thapathali, Kathamandu</p>
+                            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +977
+                                9860122996</p>
+                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email:
+                                sumit.ray9299@mail.com</p>
+                        </div>
+                        <p>Let's get in touch. Send me a message.</p>
+                        <form>
+                            <div class="input">
+                                <input type="text" placeholder="Name" required="Name">
+                                <input type="text" placeholder="Email" required="Email">
+                                <input type="text" placeholder="Subject" required="Subject">
+                                <input type="text" placeholder="Message" required="Message">
+                                <button style="width: 8rem; height: 3rem;">
+                                    <i class="fa fa-paper-plane"></i> Send message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>

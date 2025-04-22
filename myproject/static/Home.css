@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* 
+body{
+  background-color: black;
+  padding: 30px;
+} */
+
+.container {
+  margin-left: 20vw; 
+  width: 80vw;
+  height: 100vh;
+  background-color: #0b0b0b;
+}
+
+.Hero-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.Hero-container .image img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.Hero-container{
+  text-align: center;
+  color: white;
+  padding: 10px;
+  /* background-color: black; */
+}
+
+#sumit {
+    height: 80vh;
+    width: 35vw;
+    padding: 30px;
+}

@@ -1,0 +1,23 @@
+.Contact{
+    background-color: #0b0b0b;
+    color: white;
+}
+
+.Contact {
+    margin-top: 1rem;
+    padding:  0 4.5rem 0 4.5rem;
+    text-align: left;
+}
+
+.Contact .name{
+    padding: 0 3rem;
+    text-align: justify;
+}
+
+.poll {
+    padding: 3rem;
+}
+
+.poll > .class{
+    padding-bottom: 20px;
+}
