@@ -1,4 +1,3 @@
-{% load static tailwind_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,18 +9,14 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'Project.css'%}">
     <link rel="stylesheet" href="{% static 'style.css'%}">
-    <link rel="stylesheet" href="{% static 'Contct1.css'%}">
+    <link rel="stylesheet" href="{% static 'Contact1.css'%}">
     <link rel="stylesheet" href="{% static 'Home.css'%}">
     <link rel="stylesheet" href="{% static 'Contact.css'%}">
     <link rel="stylesheet" href="{% static 'Responsive.css'%}">
-    {% tailwind_css %}
 </head>
 
 <body>
-    <div class="div"><p class="bg-green-5000">hehehehe</p></div>
     <div class="hamburg">
-        <img src="./assets/Icon/more.png" alt="more" style="width: 23px;">
-        <img src="./assets/Icon/close.png" alt="close" style="width: 23px;">
     </div>
     <div class="conitener">
         <div class="navbar">
@@ -41,7 +36,7 @@
                 <h1>I'm Sumit Ray</h1>
                 <p>Full-Stack developer and System Administrator</p>
                 <div class="image">
-                    <img id="sumit" src="../assets/images/sumit.jpg" alt="sumitImage">
+                    <img src="{% static 'Image/sumit.jpg' %}" alt="Sumit">
                 </div>
             </div>
 
@@ -80,33 +75,24 @@
                 <div class="card-coni">
                     <div class="card">
                         <div class="image">
-                            <img src="../assets/images/smartAir.png" alt="Air monitroing System">
+                          <img src="{{ project.image_url }}" alt="{{ project.title }}">
                         </div>
                         <div class="content">
-                            <a href="#">
-                                <span class="title">
-                                    Air monitroing system.
-                                </span>
-                            </a>
-
-                            <p class="desc" style=" text-align: justify;">
-                                Air monitroing system help to find out the harmful gases from the air and then alert to
-                                the user accroding to it.
-                            </p>
-
-                            <a class="action" href="#">
-                                Find out more
-                            </a>
+                          <a href="{{ project.link }}">
+                            <span class="title">{{ project.title }}</span>
+                          </a>
+                          <p class="desc">{{ project.desc }}</p>
+                          <a class="action" href="{{ project.link }}">Find out more</a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="image">
-                            <img src="../assets/images/Hosptal.png" alt="Hosptial managment system">
+                            <img src="{% static 'Image/Hosptal.png'%}" alt="Hosptial managment system">
                         </div>
                         <div class="content">
                             <a href="#">
                                 <span class="title">
-                                    Hosptial management system.
+                                    {{ project.title }}
                                 </span>
                             </a>
 
@@ -128,11 +114,9 @@
                     <div class="cont-Feild">
                         <div class="icone">
                             <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
-                                Thapathali, Kathamandu</p>
-                            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +977
-                                9860122996</p>
-                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email:
-                                sumit.ray9299@mail.com</p>
+                                {{contact.location}}</p>
+                            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>{{ contact.phone }}</p>
+                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> {{ contact.email }}</p>
                         </div>
                         <p>Let's get in touch. Send me a message.</p>
                         <form>

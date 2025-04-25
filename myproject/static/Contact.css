@@ -1,23 +1,43 @@
-.Contact{
+/* Base Styles */
+.Contact {
     background-color: #0b0b0b;
     color: white;
-}
-
-.Contact {
     margin-top: 1rem;
-    padding:  0 4.5rem 0 4.5rem;
+    padding: 0 4.5rem;
     text-align: left;
-}
-
-.Contact .name{
+  }
+  
+  .Contact .name {
     padding: 0 3rem;
     text-align: justify;
-}
-
-.poll {
+  }
+  
+  .poll {
     padding: 3rem;
-}
-
-.poll > .class{
+  }
+  
+  .poll > .class {
     padding-bottom: 20px;
-}
+  }
+  
+  /* Responsive Styles for Mobile Devices */
+  @media only screen and (max-width: 768px) {
+    .Contact {
+      padding: 0 1rem;
+      text-align: center;
+    }
+  
+    .Contact .name {
+      padding: 0 1rem;
+      text-align: center;
+    }
+  
+    .poll {
+      padding: 1rem;
+    }
+  
+    .poll > .class {
+      padding-bottom: 1rem;
+    }
+  }
+  

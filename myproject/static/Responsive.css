@@ -1,0 +1,192 @@
+/* Responsive.css - Comprehensive mobile styles for the portfolio */
+
+/* Mobile Navigation - Hamburger menu implementation */
+@media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+    
+    .navbar {
+      position: fixed;
+      width: 100vw;
+      height: auto;
+      bottom: 0;
+      top: auto;
+      z-index: 1000;
+    }
+    
+    .navbar > ul {
+      flex-direction: row;
+      padding: 10px 0;
+    }
+    
+    .link > a {
+      font-size: medium;
+    }
+    
+    .link > a span {
+      font-size: 12px;
+    }
+    
+    /* Main container adjustments */
+    .container {
+      margin-left: 0 !important;
+      width: 100vw !important;
+      padding-bottom: 70px; /* Space for bottom navbar */
+    }
+    
+    /* Hero section */
+    .Hero-container {
+      padding: 1rem;
+    }
+    
+    .Hero-container h1 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+    
+    .Hero-container p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .Hero-container .image img {
+      max-width: 100%;
+      width: 300px;
+      height: auto;
+    }
+    
+    /* About section */
+    .Contact {
+      padding: 1rem !important;
+      text-align: center;
+    }
+    
+    .Contact .name {
+      padding: 0.5rem !important;
+      text-align: center;
+    }
+    
+    .Contact .name h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .poll {
+      padding: 1rem !important;
+    }
+    
+    .poll > .class {
+      padding-bottom: 1rem;
+    }
+    
+    /* Project section */
+    .project {
+      padding: 1rem !important;
+      margin-left: 0 !important;
+    }
+    
+    .project h1 {
+      font-size: 1.5rem;
+      padding-bottom: 1rem !important;
+      text-align: center;
+    }
+    
+    .project > .card-coni {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .card {
+      max-width: 100%;
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    /* Contact section */
+    .contact {
+      padding: 1rem !important;
+      margin-left: 0 !important;
+      text-align: center;
+    }
+    
+    .contact h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .cont-Feild .icone {
+      font-size: 1rem;
+    }
+    
+    .cont-Feild .icone p {
+      margin-bottom: 0.8rem;
+    }
+    
+    .contact .input {
+      padding: 0;
+      grid-template-rows: repeat(4, 40px);
+      gap: 0.8rem;
+    }
+    
+    .contact input {
+      width: 100%;
+      padding: 8px;
+    }
+    
+    .contact button {
+      width: 100% !important;
+      margin: 0 auto;
+    }
+  }
+  
+  /* For even smaller screens */
+  @media screen and (max-width: 480px) {
+    .Hero-container h1 {
+      font-size: 1.5rem;
+    }
+    
+    .Hero-container p {
+      font-size: 0.9rem;
+    }
+    
+    .Hero-container .image img {
+      width: 250px;
+    }
+    
+    .Contact .name h1,
+    .project h1,
+    .contact h1 {
+      font-size: 1.3rem;
+    }
+    
+    .Contact .name p {
+      font-size: 0.9rem;
+    }
+    
+    .poll > .class p {
+      font-size: 0.9rem;
+    }
+    
+    .card .title {
+      font-size: 1rem;
+    }
+    
+    .card .desc {
+      font-size: 0.8rem;
+    }
+    
+    .cont-Feild .icone {
+      font-size: 0.9rem;
+    }
+    
+    .navbar > ul {
+      padding: 5px 0;
+    }
+    
+    .link > a {
+      font-size: small;
+    }
+  }
