@@ -73,50 +73,34 @@
             <div class="project" id="Project" style="margin-left: 2vh;">
                 <h1 style="padding-bottom: 18px;"><b><u>Project</u></b></h1>
                 <div class="card-coni">
+                    {% for project in project %}
                     <div class="card">
                         <div class="image">
-                          <img src="{{ project.image_url }}" alt="{{ project.title }}">
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}">
                         </div>
                         <div class="content">
-                          <a href="{{ project.link }}">
-                            <span class="title">{{ project.title }}</span>
-                          </a>
-                          <p class="desc">{{ project.desc }}</p>
-                          <a class="action" href="{{ project.link }}">Find out more</a>
+                            <a href="{{ project.link }}">
+                                <span class="title">{{ project.title }}</span>
+                            </a>
+                            <p class="desc">{{ project.desc }}</p>
+                            <a class="action" href="{{ project.link }}">Find out more</a>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="image">
-                            <img src="{% static 'Image/Hosptal.png'%}" alt="Hosptial managment system">
-                        </div>
-                        <div class="content">
-                            <a href="#">
-                                <span class="title">
-                                    {{ project.title }}
-                                </span>
-                            </a>
-
-                            <p class="desc" style="text-align: justify;">
-                                Develope the CLI based Hosptal managmend system which help staff to find out the patient
-                                and search aout the doctor easy way.
-                            </p>
-
-                            <a class="action" href="#">
-                                Find out more
-                            </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="contact" id="Contact" style=" margin-left: 2vh;">
                 <div class="contact">
+
                     <h1><b><u>Contact</u></b></h1>
                     <div class="cont-Feild">
                         <div class="icone">
                             <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
                                 {{contact.location}}</p>
-                            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>{{ contact.phone }}</p>
-                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> {{ contact.email }}</p>
+                            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+                                {{contact.phone }}</p>
+                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> 
+                               {{ contact.email }}</p>
                         </div>
                         <p>Let's get in touch. Send me a message.</p>
                         <form>
@@ -130,6 +114,7 @@
                                 </button>
                             </div>
                         </form>
+
                     </div>
 
                 </div>

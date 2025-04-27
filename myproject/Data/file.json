@@ -1,0 +1,34 @@
+{
+    "name": "Sumit Ray",
+    "roles": [
+      {
+        "title": "Full-Stack Developer"
+      },
+      {
+        "title": "System Administrator"
+      },
+      {
+        "title": "Networking Specialist"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Portfolio Website",
+        "desc": "A personal portfolio built using Django and React.",
+        "image_url": "/static/Image/portfolio.png",
+        "link": "#"
+      },
+      {
+        "title": "Hospital Management System",
+        "desc": "Developed a CLI-based hospital management system to assist staff in tracking patients and doctors.",
+        "image_url": "/static/Image/Hosptal.png",
+        "link": "#"
+      }
+    ],
+    "contact": {
+      "location": "Kathmandu, Nepal",
+      "phone": "+977-1234567890",
+      "email": "sumit@example.com"
+    }
+  }
+  
