@@ -43,34 +43,22 @@
             </div>
 
             <div class="Contact" id="About">
+                {% for about in about %}
                 <div class="name">
-                    <h1><b><u>Sumit Ray</u></b></h1>
-                    <p>I’m a experienced IT Professional with a of cybersecurity and networking and computer. I can
-                        maintain order, implement strong security measures, and ensure that the business complies with
-                        security regulations. I can identify and address issues, monitor systems for issues, and provide
-                        safe IT solutions. I'm eager to put my abilities to and improving the security of the company's
-                        critical data</p>
+                    <h1><b><u>{{about.name}}</u></b></h1>
+                    <p>{{about.paragraph}}</p> <br> {{about.paragraph1}}
                 </div>
-
+                {% endfor %}
                 <div class="poll">
+                    {% for skill in skill %}
                     <div class="class">
-                        <p>Full-Stack developer</p>
-                        <div class="white" style="height: 28px; background-color: white;">
-                            <div class="dark" style="height:28px;width:60%; background-color: grey;"></div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <p>System Administrator</p>
-                        <div class="white" style="height: 28px; background-color: white;">
-                            <div class="dark" style="height:28px;width:70%; background-color: grey;"></div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <p>Networking</p>
+                        <p>{{skill.skillName}}</p>
                         <div class="white" style="height: 28px; background-color: white; ">
-                            <div class="dark" style="height:28px;width:85%; background-color: grey;"></div>
+                            <div class="dark" style="height:28px; width: {{ skill.skillpercent }}%; background-color: grey;"></div>
+
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="project" id="Project" style="margin-left: 2vh;">

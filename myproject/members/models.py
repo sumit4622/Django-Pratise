@@ -11,6 +11,22 @@ class Role(models.Model):
     def __str__(self):
         return self.title
 
+class About(models.Model):
+    name = models.CharField(max_length=100, null= True, blank=True)
+    paragraph = models.CharField(max_length=650, null= True, blank=True)
+    paragraph1 = models.CharField(max_length=940, null=True, blank=True)
+    
+
+    def __str__(self):
+        return "About"
+
+class Skill(models.Model):
+    skillName = models.CharField(max_length=50, null=True, blank=True)
+    skillpercent = models.CharField(max_length=50, null=True, blank=True)
+
+    def __str__(self):
+        return "Skill"
+
 class Project(models.Model):
     title = models.CharField(max_length=200)
     desc = models.TextField()
