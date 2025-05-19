@@ -33,8 +33,10 @@
         </div>
         <div class="container" id="Home">
             <div class="Hero-container">
-                <h1>I'm Sumit Ray</h1>
-                <p>Full-Stack developer and System Administrator</p>
+                {% for roles in roles %}
+                <h1>{{roles.heading}}</h1>
+                <p>{{ roles.title }}</p>
+                {% endfor %}
                 <div class="image">
                     <img src="{% static 'Image/sumit.jpg' %}" alt="Sumit">
                 </div>
@@ -49,6 +51,7 @@
                         safe IT solutions. I'm eager to put my abilities to and improving the security of the company's
                         critical data</p>
                 </div>
+
                 <div class="poll">
                     <div class="class">
                         <p>Full-Stack developer</p>
@@ -96,11 +99,11 @@
                     <div class="cont-Feild">
                         <div class="icone">
                             <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
-                                {{contact.location}}</p>
+                                {{ contact.location }}</p>
                             <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
-                                {{contact.phone }}</p>
-                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> 
-                               {{ contact.email }}</p>
+                                {{ contact.phone }}</p>
+                            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i>
+                                {{ contact.email }}</p>
                         </div>
                         <p>Let's get in touch. Send me a message.</p>
                         <form>
