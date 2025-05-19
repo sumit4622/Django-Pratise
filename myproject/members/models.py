@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 
 class Role(models.Model):
+    heading = models.CharField(max_length=100, null=True, blank=True)
     title = models.CharField(max_length=100)
     progress = models.IntegerField()
 
