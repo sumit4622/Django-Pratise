@@ -1,5 +1,5 @@
-# members/views.py
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import ContactForm
 from .models import Role, Project, ContactInfo, About, Skill
 
 def home(request):
@@ -9,6 +9,14 @@ def home(request):
     project = Project.objects.all()
     contact = ContactInfo.objects.first()
 
+    # Handle contact form submission
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')  # Redirect to clear POST
+    else:
+        form = ContactForm()
 
     context = {
         'name': 'Sumit Ray',
@@ -17,6 +25,7 @@ def home(request):
         'skill': skill,
         'project': project,
         'contact': contact,
+        'form': form,  
     }
 
     return render(request, 'index.html', context)

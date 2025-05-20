@@ -54,7 +54,8 @@
                     <div class="class">
                         <p>{{skill.skillName}}</p>
                         <div class="white" style="height: 28px; background-color: white; ">
-                            <div class="dark" style="height:28px; width: {{ skill.skillpercent }}%; background-color: grey;"></div>
+                            <div class="dark"
+                                style="height:28px; width: {{ skill.skillpercent }}%; background-color: grey;"></div>
 
                         </div>
                     </div>
@@ -94,17 +95,22 @@
                                 {{ contact.email }}</p>
                         </div>
                         <p>Let's get in touch. Send me a message.</p>
-                        <form>
+                        <form method="post">
+                            {% csrf_token %}
                             <div class="input">
-                                <input type="text" placeholder="Name" required="Name">
-                                <input type="text" placeholder="Email" required="Email">
-                                <input type="text" placeholder="Subject" required="Subject">
-                                <input type="text" placeholder="Message" required="Message">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="text" name="subject" placeholder="Subject" required>
+                                <textarea name="message" placeholder="Message" required></textarea>
+
                                 <button style="width: 8rem; height: 3rem;">
                                     <i class="fa fa-paper-plane"></i> Send message
                                 </button>
                             </div>
                         </form>
+                        {% if success %}
+                        <p style="color: green;">Message sent successfully!</p>
+                        {% endif %}
 
                     </div>
 
