@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static 'Home.css'%}">
     <link rel="stylesheet" href="{% static 'Contact.css'%}">
     <link rel="stylesheet" href="{% static 'Responsive.css'%}">
+    <link rel="stylesheet" href="{% static 'experience.css'%}">
 </head>
 
 <body>
@@ -61,6 +62,26 @@
                     </div>
                     {% endfor %}
                 </div>
+            </div>
+            <div class="exprariance">
+                <header>
+                    <h1>Experience</h1>
+                </header>
+                {% for exp in experiences %}
+                <ul class="timeline">
+                    <!-- Item 1 -->
+                    <li>
+                        <div class="direction-{% if exp.side == 'right' %}r{% else %}l{% endif %}">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">{{exp.role}}</span>
+                                <span class="time-wrapper"><span class="time">{{exp.date}}</span></span>
+                            </div>
+                            <div class="desc">{{exp.description}}</div>
+                        </div>
+                    </li>
+                </ul>
+                {% endfor %}
             </div>
             <div class="project" id="Project" style="margin-left: 2vh;">
                 <h1 style="padding-bottom: 18px;"><b><u>Project</u></b></h1>
