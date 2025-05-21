@@ -46,7 +46,7 @@ class Experience(models.Model):
     company = models.CharField(max_length=100)
     date = models.CharField(max_length=50)
     location = models.CharField(max_length=100)
-    side = models.CharField(max_length=5, choices=SIDE_CHOICES, default='right')
+    side = models.CharField(max_length=5, choices=SIDE_CHOICES, default='right', blank= False)
     description = models.TextField()
 
     def __str__(self):

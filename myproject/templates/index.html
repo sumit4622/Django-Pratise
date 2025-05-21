@@ -67,38 +67,21 @@
                 <header>
                     <h1>Experience</h1>
                 </header>
+                {% for exp in experiences %}
                 <ul class="timeline">
                     <!-- Item 1 -->
                     <li>
-                        <div class="direction-r">
+                        <div class="direction-{% if exp.side == 'right' %}r{% else %}l{% endif %}">
                             <div class="flag-wrapper">
                                 <span class="hexa"></span>
-                                <span class="flag">System/Network(Intern)</span>
-                                <span class="time-wrapper"><span class="time">Aug 2023</span></span>
+                                <span class="flag">{{exp.role}}</span>
+                                <span class="time-wrapper"><span class="time">{{exp.date}}</span></span>
                             </div>
-                            <div class="desc">From August 2023 to May 2024, I worked as a System/Network Intern at Norvic International Hospital in Kathmandu, where I gained hands-on experience in managing and supporting critical IT infrastructure in a healthcare environment. My role involved assisting with system administration, network configuration, and troubleshooting technical issues across various departments. I became proficient in tools like Active Directory and contributed to maintaining secure and efficient IT operations. This experience enhanced my skills in computer information systems, networking, and IT infrastructure management, while also teaching me the importance of reliability and precision in a real-world, high-pressure setting.</div>
-                        </div>
-                    </li>
-
-                    <!-- Item 2 -->
-                    <li>
-                        <div class="direction-l">
-                            <div class="flag-wrapper">
-                                <span class="hexa"></span>
-                                <span class="flag">Web-developer(Intern)</span>
-                                <span class="time-wrapper"><span class="time">Dec 2014</span></span>
-                            </div>
-                            <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore
-                                aliquip enim cupidatat laborum dolore.</div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="direction-l">
-                            <h1>lulu</h1>
+                            <div class="desc">{{exp.description}}</div>
                         </div>
                     </li>
                 </ul>
+                {% endfor %}
             </div>
             <div class="project" id="Project" style="margin-left: 2vh;">
                 <h1 style="padding-bottom: 18px;"><b><u>Project</u></b></h1>

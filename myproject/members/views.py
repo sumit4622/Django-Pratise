@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
-from .models import Role, Project, ContactInfo, About, Skill
+from .models import Role, Project, ContactInfo, About, Skill ,Experience
 
 def home(request):
     roles = Role.objects.all()
     about = About.objects.all()
     skill = Skill.objects.all()
     project = Project.objects.all()
+    experience = Experience.objects.all() 
     contact = ContactInfo.objects.first()
 
     # Handle contact form submission
@@ -26,6 +27,8 @@ def home(request):
         'project': project,
         'contact': contact,
         'form': form,  
+        'experiences': experience,
     }
 
     return render(request, 'index.html', context)
+# print(f"experience")
