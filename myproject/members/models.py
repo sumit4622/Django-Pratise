@@ -36,6 +36,22 @@ class Project(models.Model):
     def __str__(self):
         return "Project"
 
+class Experience(models.Model):
+    SIDE_CHOICES = [
+        ('left', 'Left'),
+        ('right', 'Right'),
+    ]
+
+    role = models.CharField(max_length=100)
+    company = models.CharField(max_length=100)
+    date = models.CharField(max_length=50)
+    location = models.CharField(max_length=100)
+    side = models.CharField(max_length=5, choices=SIDE_CHOICES, default='right')
+    description = models.TextField()
+
+    def __str__(self):
+        return f"{self.role} at {self.company}"
+
 class ContactInfo(models.Model):
     location = models.CharField(max_length=200)
     phone = models.CharField(max_length=20)
